@@ -1,15 +1,41 @@
 <div class="w-100 row">
     <div class="col-2">
-        <div class="bg-dark pt-5" style="height: 93vh;">
+        <div style="height:93vh;" class="bg-dark pt-5">
             <h5 class="text-center">
-                <a routerLink="/home" class="text-light text-decoration-none">Home</a>
+                <a routerLink="/home" class="text-light text-decoration-none" href="">Home</a>
             </h5>
             <h5 class="text-center mt-5">
-                <a routerLink="/employee" class="text-light text-decoration-none">Employee</a>
+                <a routerLink="/employee" class="text-light text-decoration-none" href="">Employee</a>
             </h5>
+            <div class="text-center">
+                <button class="btn btn-link text-danger" (click)="logout()">Logout</button>
+            </div>
         </div>
+
     </div>
-    <div class="col-10 p-2">
-        <h3>Welcome Admin!</h3>
+    <div class="col-10 p-2 row">
+        <div class="col-8">
+            <div class="d-flex justify-content-center p-5"
+                style="background-image: url(https://tse4.mm.bing.net/th?id=OIP.5zUbpYBjEqI77OQAjfIZOQHaEo&pid=Api&P=0&h=180); background-repeat: no-repeat; background-size: cover;">
+                <h3 class="text-light">Welcome Admin!</h3>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <app-calender></app-calender>
+                </div>
+                <div class="col">
+                    <app-chart></app-chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="ps-3">
+                <app-profile></app-profile>
+            </div>
+            <div class="p-5 text-light"
+                style="background-image:  url(https://tse4.mm.bing.net/th?id=OIP.5zUbpYBjEqI77OQAjfIZOQHaEo&pid=Api&P=0&h=180); background-repeat: no-repeat; background-size: cover;">
+                <h3>Employee Count:{{count}}</h3>
+            </div>
+        </div>
     </div>
 </div>

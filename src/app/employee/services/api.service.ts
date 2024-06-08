@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  base_url:string="http://localhost:3000"
+  base_url="https://employee-backend-c8j1.onrender.com"
   constructor(private http: HttpClient) { }
 
   addEmployee(data: any) {

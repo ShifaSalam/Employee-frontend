@@ -11,13 +11,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ToastrModule } from 'ngx-toastr';
+import { CalenderComponent } from './calender/calender.component';
+import { ChartComponent } from './chart/chart.component';
+import { ProfileComponent } from './profile/profile.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatCardModule} from '@angular/material/card';
+import { MatNativeDateModule } from '@angular/material/core';
+
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    CalenderComponent,
+    ChartComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +36,11 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule,
+    MatCardModule,
+    MatNativeDateModule,
+    HighchartsChartModule
 
   ],
   providers: [],
